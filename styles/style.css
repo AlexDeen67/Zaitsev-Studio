@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap');
+body{
+	background: #f8f3fc;
+	font-family: 'STIX Two Text', serif;
+	margin: 0px;
+}
+
+header{
+	height: 100vh;
+	background-image: url("https://i.pinimg.com/originals/9f/f1/3f/9ff13fec3ee828470287b4694ff13b5d.png");
+	background-repeat: no-repeat;
+	background-position-y: 215px;
+	background-size: 75%;
+}
+
+header nav ul{
+	list-style-type: none;
+	padding-right: 50px;
+	margin-top: 30px;
+}
+header nav ul li{
+	margin-right: 50px;
+	float: right;
+}
+header nav ul li a{
+	text-decoration: none;
+	color: rgb(43, 40, 40);
+	font-size: 130%;
+}
+header nav ul li a:hover{
+	color: #30d5c8;
+	text-decoration: underline;
+}
+
+.intro{
+	padding-top: 30vh;
+	padding-left: 8vh;
+}
+
+.intro h3{
+	font-size: 80px;
+}
+
+.pc h3{
+	text-align: center;
+	font-size: 40px;
+	color: rgb(43, 40, 40);
+}
+
+.choose{
+	height: 800px;
+}
+
+.choose .p{
+	background:rgb(43, 40, 40);
+}
+
+.choose .c{
+	background: #30d5c8;
+}
+
+.bottom{
+	margin-top: 150px;
+	background-color: rgb(40, 40, 40);
+	font-size: 1.5em;
+	border-top-left-radius: 180px;
+	color: #f8f3fc;
+	font-weight: bold;
+}
+
+.bottom ul{
+	margin: 0px;
+	text-align: right;
+	padding: 40px 80px 40px 0;
+}
+
+.bottom a{
+	text-decoration: none;
+	color: #f8f3fc;
+}
+
+.bottom a:hover{
+	color: #30d5c8;
+}
