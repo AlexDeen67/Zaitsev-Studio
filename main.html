@@ -8,33 +8,46 @@
 </head>
 <body>
 	<header>
-		<nav>
-			<ul>
-				<li><a href="/">Контакты</a></li>
-				<li><a href="/">Сайты</a></li>
-				<li><a href="/">Творчество</a></li>
-				<li><a href="/">Биография</a></li>
-			</ul>
-		</nav>
-		<div class="intro">
-			<h3>Художник & Програмист</h3>
-			<h1>Александр Зайцев</h1>
-		</div>
+		<a href="#" class="logo">ZS</a>
+		<ul>
+			<li><a href='#about'>About</a></li>
+			<li><a href='#'>Work</a></li>
+			<li><a href='#'>Contacts</a></li>
+		</ul>
 	</header>
-	<section class="pc">
-		<div class="row choose">
-			<div class="col-6 p">
-			</div>
-			<div class="col-6 c">
+	<section class="main">
+		<img src="images/front.png" id="front">
+		<img src="images/mid.png">
+		<img src="images/back.png" id="back">
+		<!--<h1 id='zs'>Zaitsev Studio</h1>-->
+		<img src="images/zs.png" id="zs">
+	</section>
+	<section class="about">
+		<div class="card">
+			<div class="content">
+				<img src="images/me.png">
+				<p><b>Zaitsev Alexender</b><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, amet.</p>
 			</div>
 		</div>
 	</section>
-	<div class="bottom">
-		<ul>
-			<li><a href="https://vk.com/alexzendr67">Вконтакте</a></li>
-			<li><a href="https://www.pinterest.ru/TheAlexFeed67">Пинтерест</a></li>
-			<li>Почта: alexzendr67@gmail.com</li>
-		</ul>
-	</div>
+	<section class="works">
+
+	</section>
+	<footer>
+
+	</footer>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script>
+		let front = document.getElementById('front')
+		let back = document.getElementById('back')
+		let zs = document.getElementById('zs')
+		window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+			zs.style.left = value * -2 + 'px';
+			front.style.top = value * -0.2 + 'px';
+			back.style.top = value * -0.2 + 'px';
+        })
+	</script>
 </body>
 </html>

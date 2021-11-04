@@ -1,84 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap');
-body{
-	background: #f8f3fc;
-	font-family: 'STIX Two Text', serif;
-	margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
-
-header{
-	height: 100vh;
-	background-image: url("https://i.pinimg.com/originals/9f/f1/3f/9ff13fec3ee828470287b4694ff13b5d.png");
-	background-repeat: no-repeat;
-	background-position-y: 216px;
-	background-size: 75%;
+body
+{
+    /*background: #cccccc;*/
+    background: linear-gradient(to bottom left, #dad9d9, #cccccc);
 }
-
-header nav ul{
-	list-style-type: none;
-	padding-right: 50px;
-	margin-top: 30px;
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
 }
-header nav ul li{
-	margin-right: 50px;
-	float: right;
+header .logo
+{
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: 0;
+    text-transform: uppercase;
 }
-header nav ul li a{
-	text-decoration: none;
-	color: rgb(43, 40, 40);
-	font-size: 130%;
+header ul
+{
+    
+    display: flex;
+    justify-content: center;
 }
-header nav ul li a:hover{
-	color: #30d5c8;
-	text-decoration: underline;
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
 }
-
-.intro{
-	padding-top: 30vh;
-	padding-left: 8vh;
+header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #333;
+    border-radius: 20px;
 }
-
-.intro h3{
-	font-size: 80px;
+header ul li a:hover
+{
+    color: #000;
+    font-weight: 700;
+    background: #fff;
+    border-radius: 30px;
 }
-
-.pc h3{
-	text-align: center;
-	font-size: 40px;
-	color: rgb(43, 40, 40);
+.main
+{
+    /*background: #cccccc;*/
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
 }
-
-.choose{
-	height: 800px;
+.main img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
 }
-
-.choose .p{
-	background:rgb(43, 40, 40);
+.main img#front
+{
+    z-index: 3;
 }
-
-.choose .c{
-	background: #30d5c8;
+/*
+#about
+{
+    padding: 250px 0;
 }
-
-.bottom{
-	margin-top: 150px;
-	background-color: rgb(40, 40, 40);
-	font-size: 1.5em;
-	border-top-left-radius: 180px;
-	color: #f8f3fc;
-	font-weight: bold;
+.aboutRow
+{
+    background: linear-gradient(to bottom left,#c99bf8, #938ce4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 150px;
+    margin: 0 100px;
+    border-radius: 45px;
+    box-shadow: -10px 10px 9px rgba(0, 0, 0, 0.4)
 }
-
-.bottom ul{
-	margin: 0px;
-	text-align: right;
-	padding: 40px 80px 40px 0;
+.aboutRow img
+{
+    height: 250px;
 }
-
-.bottom a{
-	text-decoration: none;
-	color: #f8f3fc;
+.aboutRow p
+{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5em;
 }
-
-.bottom a:hover{
-	color: #30d5c8;
+*/
+.about
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card
+{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background: rgba(147, 140, 228, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 10px 9px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover
+{
+    transform: scale(1.2);
+    background: rgba(147, 140, 228, 0.5);
+}
+.card::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom left,#c99bf8, #938ce4);
+}
+.card .content
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    padding: 0 70px;
+}
+.card img
+{
+    width: 150px;
+}
+.card p
+{
+    font-size: 1.3em;
+    padding-left: 40px;
 }
