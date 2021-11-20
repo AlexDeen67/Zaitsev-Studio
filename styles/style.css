@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
 *
 {
     margin: 0;
@@ -11,6 +12,9 @@ body
 {
     /*background: #cccccc;*/
     background: linear-gradient(to bottom left, #dad9d9, #cccccc);
+    min-height: 100vh;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 header
 {
@@ -22,7 +26,7 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10000;
+    z-index: 1100;
 }
 header .logo
 {
@@ -35,7 +39,6 @@ header .logo
 }
 header ul
 {
-    
     display: flex;
     justify-content: center;
 }
@@ -60,7 +63,7 @@ header ul li a:hover
 }
 .main
 {
-    /*background: #cccccc;*/
+    /*background: #ff0000;*/
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -68,20 +71,136 @@ header ul li a:hover
     justify-content: center;
     align-items: center;
     z-index: 2;
+    overflow: hidden;
+    user-select: none;
 }
-.main img
-{
+.main #maintext01{
+    position: absolute;
+    font-size: 6vw;
+    font-family: 'Shippori Antique', sans-serif;
+    font-weight: bold;
+    z-index: 10;
+}
+.main #maintext02{
+    position: absolute;
+    font-size: 3vw;
+    font-family: 'Shippori Antique', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    top: 75%;
+    left: 15%;
+    z-index: 2;
+}
+.main #mainimg01{
+    position: absolute;
+    height: 80vh;
+    left: -50vh;
+    z-index: 11;
+}
+.main #mainimg02{
+    position: absolute;
+    height: 50vh;
+    top: 45%;
+    left: 5%;
+    z-index: 1;
+}
+.main #mainimg03{
+    position: absolute;
+    height: 45vh;
+    top: 20%;
+    left: 60%;
+}
+.main #mainimg04{
+    position: absolute;
+    height: 20vh;
+    top: 50%;
+    left: 80%;
+}
+.main #mainimg05{
+    position: absolute;
+    height: 35vh;
+    top: 15vh;
+    left: 10vh;
+}
+#Contacts{
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: #333;
+    padding: 6px 15px;
+    cursor: pointer;
+}
+#Contacts:hover{
+    color: #000;
+    font-weight: 700;
+    background: #fff;
+    border-radius: 30px;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.09s ease-out;
+}
+.modal.show{
+    visibility: visible;
+    z-index: 1200;
+    opacity: 1;
+}
+.overlay{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    pointer-events: none;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: 0;
 }
-.main img#front
+.modal-window{
+    position: relative;
+    z-index: 2;
+    width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    padding: 45px;
+}
+.modal-window ul li
 {
-    z-index: 3;
+    list-style: none;
+}
+.modal-window ul li a{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2em;
+    color: #000;
+}
+.modal-window ul li a p{
+    padding-left: 20px;
+}
+.btn-close{
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    border: none;
+    background: none;
+    opacity: 0.8;
+    font-size: 1.5em;
+}
+.btn-close:hover{
+    opacity: 1;
 }
 /*
 #about
@@ -112,7 +231,8 @@ header ul li a:hover
 */
 .about
 {
-    height: 100vh;
+    /*height: 100vh;*/
+    padding-top: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,7 +256,7 @@ header ul li a:hover
 .card:hover
 {
     transform: scale(1.2);
-    background: rgba(147, 140, 228, 0.5);
+    background: rgba(147, 140, 228, 0.3);
 }
 .card::before
 {
@@ -146,7 +266,7 @@ header ul li a:hover
     left: 0;
     width: 100%;
     height: 80px;
-    background: linear-gradient(to bottom left,#c99bf8, #938ce4);
+    background: linear-gradient(to left,#c99bf8, #938ce4);
 }
 .card .content
 {
@@ -163,4 +283,301 @@ header ul li a:hover
 {
     font-size: 1.3em;
     padding-left: 40px;
+}
+.sci
+{
+    position: fixed;
+    right: 100px;
+    bottom: 40px;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+}
+.sci li
+{
+    list-style: none;
+}
+.sci li a
+{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.75em;
+}
+.container
+{
+    position: relative;
+    margin: 150px 0;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+} 
+.container .serviceBox
+{
+    position: relative;
+    width: 350px;
+    height: 480px;
+    background: #51446e;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.container .serviceBox .icon
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--i);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.container .serviceBox:hover .icon
+{
+    top: 80px;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.container .serviceBox .icon ion-icon
+{
+    font-size: 5em;
+    color: #fff;
+    transition: 0.5s;
+}
+.container .serviceBox:hover .icon ion-icon
+{
+    font-size: 3em;
+    color: #fff;
+}
+.container .serviceBox .content
+{
+    position: relative;
+    padding: 20px;
+    color: #fff;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 180px;
+    z-index: 1;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.container .serviceBox:hover .content
+{
+    transform: scale(1);
+}
+.container .serviceBox .content h2
+{
+    margin-top: 10px;
+}
+.container .serviceBox .content p
+{
+    margin-bottom: 10px;
+}
+#look{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#look:hover{
+    color: #000;
+    font-weight: 700;
+    background: #fff;
+    border-radius: 30px;
+}
+footer{
+    margin-top: 16vh;
+    position: relative;
+    width: 100%;
+    background: #938ce4;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../images/wave.png);
+    background-size: 1000px 100px;
+
+}
+footer  .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+footer  .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+footer  .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+footer  .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+@keyframes animateWave
+{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+@keyframes animateWave_02
+{
+    0%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+@media (max-width: 770px){
+    .main #maintext01{
+        font-weight: 8vw;
+    }
+    .main #maintext02{
+        left: 20%;
+    }
+    .main #mainimg01{
+        height: 100vw;
+        z-index: 1;
+    }
+    .main #mainimg02{
+        height: 60vw;
+        top: 50%;
+        left: 3%;
+        z-index: 0;
+    }
+    /*.main #mainimg03{
+        
+    }
+    .main #mainimg04{
+        
+    }*/
+    .main #mainimg05{
+        top: 15%;
+        left: -5%;
+        height: 40vw;
+    }
+    .card{
+        height: 60vh;
+        width: 70%;
+        font-size: 1.5em;
+    }
+    .card p{
+        padding-left: 0;
+        text-align: center;
+        font-size: 4vw;
+    }
+    .card img{
+        display: none;
+    }
+    .sci{
+        right: 5%;
+        font-size: 20px;
+    }
+}
+@media (max-width: 350px){
+    header{
+        padding: 10px;
+        font-size: 10px;
+    }
+    header ul li
+    {
+        margin-left: 5px;
+    }
+    .sci{
+        right: 5%;
+        font-size: 13px;
+    }
+    .container
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 150px 0;
+        width: 80vw;
+    } 
+    .container .serviceBox
+    {
+        height: 80vh;
+    }
+    .container .serviceBox:hover .icon
+    {
+        top: 30px;
+        left: calc(50% - 50px);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    
+    .container .serviceBox .icon ion-icon
+    {
+        font-size: 5em;
+        color: #fff;
+        transition: 0.5s;
+    }
+    .container .serviceBox:hover .icon ion-icon
+    {
+        font-size: 3em;
+        color: #fff;
+    }
+    .container .serviceBox .content
+    {
+        position: relative;
+        padding: 10px;
+        color: #fff;
+        font-size: 1.3em;
+        text-align: center;
+        margin-top: 40px;
+        z-index: 1;
+        transform: scale(0);
+        transition: 0.5s;
+    }
+    .container .serviceBox:hover .content
+    {
+        transform: scale(1);
+        font-size: 0.9em;
+    }
+    .container .serviceBox .content h2
+    {
+        margin-top: 100px;
+    }
+    .container .serviceBox .content p
+    {
+        margin-bottom: 10px;
+    }
 }

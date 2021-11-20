@@ -11,18 +11,32 @@
 		<a href="#" class="logo">ZS</a>
 		<ul>
 			<li><a href='#about'>About</a></li>
-			<li><a href='#'>Work</a></li>
-			<li><a href='#'>Contacts</a></li>
+			<li><a href='#works'>Works</a></li>
+			<li><a id="Contacts" data-easy-toggle="#modalWin" data-easy-class="show">Contacts</a></li>
 		</ul>
 	</header>
+	<div id="modalWin" class="modal">
+		<div class="modal-window">
+			<h1>Me in</h1>
+			<ul class="links">
+				<li><a href="https://vk.com/alexzendr67" target="_blank"><ion-icon name="logo-vk"></ion-icon><p>VKontakte</p></a></li>
+				<li><a href="https://www.facebook.com/profile.php?id=100074140370834" target="_blank"><ion-icon name="logo-facebook"></ion-icon><p>Facebook</p></a></li>
+				<li><a href="https://www.pinterest.ru/" target="_blank"><ion-icon name="logo-pinterest"></ion-icon><p>Pinterest</p></a></li>
+			</ul>
+			<button class="btn-close" data-easy-toggle="#modalWin">X</button>
+		</div>
+		<div class="overlay" data-easy-toggle="#modalWin"></div>
+	</div>
 	<section class="main">
-		<img src="images/front.png" id="front">
-		<img src="images/mid.png">
-		<img src="images/back.png" id="back">
-		<!--<h1 id='zs'>Zaitsev Studio</h1>-->
-		<img src="images/zs.png" id="zs">
+		<p id="maintext01">ZAITSEVSTUDIO</p>
+		<p id="maintext02">LOOK WHAT I DO</p>
+		<img id="mainimg01" src="images/circle.png"><img>
+		<img id="mainimg02" src="images/circle.png"><img>
+		<img id="mainimg03" src="images/circle.png"><img>
+		<img id="mainimg04" src="images/circle.png"><img>
+		<img id="mainimg05" src="images/grid.png"><img>
 	</section>
-	<section class="about">
+	<section class="about" id="about">
 		<div class="card">
 			<div class="content">
 				<img src="images/me.png">
@@ -30,24 +44,69 @@
 			</div>
 		</div>
 	</section>
-	<section class="works">
-
-	</section>
+	<div class="container" id="works">
+		<div class="serviceBox">
+			<div class="icon" style="--i:linear-gradient(to right,#c99bf8, #938ce4)">
+				<ion-icon name="code-outline"></ion-icon>
+			</div>
+			<div class="content">
+				<h2>Coding</h2>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente quo iusto odit architecto nemo. Nulla.</p>
+				<a id="look">Look</a>
+			</div>
+		</div>
+		<div class="serviceBox">
+			<div class="icon" style="--i:#938ce4">
+				<ion-icon name="brush-outline"></ion-icon>
+			</div>
+			<div class="content">
+				<h2>Drawing</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus fugit error laborum ut nulla debitis, hic illo sapiente rerum sit.</p>
+				<a id="look">Look</a>
+			</div>
+		</div>
+		<div class="serviceBox">
+			<div class="icon" style="--i:linear-gradient(to left,#c99bf8, #938ce4)">
+				<ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+			</div>
+			<div class="content">
+				<h2>Other</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quam!</p>
+				<a id="look">Look</a>
+			</div>
+		</div>
+	</div>
+	<ul class="sci">
+		<li><a href="https://vk.com/alexzendr67" target="_blank"><ion-icon name="logo-vk"></ion-icon></a></li>
+		<li><a href="https://www.facebook.com/profile.php?id=100074140370834" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+		<li><a href="https://www.pinterest.ru/" target="_blank"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+	</ul>
 	<footer>
-
+		<div class="waves">
+			<div class="wave" id="wave1"></div>
+			<div class="wave" id="wave2"></div>
+			<div class="wave" id="wave3"></div>
+			<div class="wave" id="wave4"></div>
+		</div>
 	</footer>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	<script>
-		let front = document.getElementById('front')
-		let back = document.getElementById('back')
-		let zs = document.getElementById('zs')
+		/*let front = document.getElementById('front')*/
+		let maintext01 = document.getElementById('maintext01')
+		let maintext02 = document.getElementById('maintext02')
+		let mainimg02 = document.getElementById('mainimg02')
+		let mainimg03 = document.getElementById('mainimg03')
 		window.addEventListener('scroll', function(){
             let value = window.scrollY;
-			zs.style.left = value * -2 + 'px';
+			/*zs.style.left = value * -2 + 'px';
 			front.style.top = value * -0.2 + 'px';
-			back.style.top = value * -0.2 + 'px';
+			back.style.top = value * -0.2 + 'px';*/
+			
         })
+
+		!function(){"use strict";document.addEventListener("click",function(t){const e=t.target.closest("[data-easy-toggle]");if(e){t.preventDefault();let a=e.getAttribute("data-easy-toggle"),s=e.getAttribute("data-easy-class");try{document.querySelectorAll("[data-easy-toggle]").forEach(t=>{t.hasAttribute("data-easy-parallel")||t===e||document.querySelector(t.getAttribute("data-easy-toggle")).classList.remove(t.getAttribute("data-easy-class"))}),document.querySelector(a).classList.toggle(s)}catch(t){console.warn("EasyToggler.js : Блок "+a+" не существует")}}if(!e){let e=document.querySelectorAll("[data-easy-rcoe]");Array.from(e).forEach.call(e,function(e){let a=e.getAttribute("data-easy-toggle"),s=e.getAttribute("data-easy-class");if(!t.target.closest(a))try{document.querySelector(a).classList.remove(s)}catch(t){console.warn("EasyToggler.js : Блок "+a+" не существует")}})}})}();
+
 	</script>
 </body>
 </html>
